@@ -14,7 +14,7 @@ spec:
         app: actuator-sample
     spec:
       containers:
-      - image: falconwoo/actuatorsample-docker:0.1
+      - image: falconwoo/actuatorsample-docker:0.2
         name: actuator-sample
         ports:
         - containerPort: 8080
