@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: actuator-sample
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: actuator-sample
+  template:
+    metadata:
+      labels:
+        app: actuator-sample
+    spec:
+      containers:
+      - image: falconwoo/actuatorsample-docker:0.1
+        name: actuator-sample
+        ports:
+        - containerPort: 8080
